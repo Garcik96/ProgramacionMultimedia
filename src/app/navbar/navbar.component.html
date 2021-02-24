@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg" [class.bg-dark]="darkMode" [class.navbar-dark]="darkMode" [class.bg-light]="!darkMode" [class.navbar-light]="!darkMode">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['home']">Home</a>
+      </li>
+      <li class="nav-item dropdown" routerLinkActive="active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Nuestros trabajos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#" [routerLink]="['nuestros-trabajos/video']">Video</a>
+          <a class="dropdown-item" href="#" [routerLink]="['nuestros-trabajos/audio']">Audio</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['contacta-con-nosotros']">Contacta con nosotros</a>
+        </li>
+        <li class="nav-item">
+          <mat-slide-toggle [(ngModel)]="darkMode">
+            <fa-icon [icon]="getIconMode()" size="lg" class="my-auto ml-3" [class.dark-icon]="darkMode" [class.light-icon]="!darkMode"></fa-icon>
+          </mat-slide-toggle>
+        </li>
+    </ul>
+  </div>
+</nav>
