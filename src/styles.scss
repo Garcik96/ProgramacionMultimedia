@@ -1,0 +1,189 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+$light-background: #ffffff;
+$light-accent-background: #f4f6f8;
+$light-accent-text: #263238;
+$light-text: #546e7a;
+$light-accent: #5850EC;
+
+$dark-background: #282C34;
+$dark-accent-background: #1c2025;
+$dark-accent-text: #e6e5e8;
+$dark-text: #adb0bb;
+$dark-accent: #8a85ff;
+
+.bg-light {
+    background-color: $light-background !important;
+}
+
+.bg-light-accent {
+  background-color: $light-accent-background !important;
+}
+
+.bg-dark {
+    background-color: $dark-background !important;
+}
+
+.bg-dark-accent {
+  background-color: $dark-accent-background !important;
+}
+
+.navbar-light {
+  .navbar-nav {
+    .nav-link {
+      color: $light-text;
+      &:hover,
+      &:focus {
+        color: $light-accent-text;
+      }
+    }
+    .nav-item.active {
+      .nav-link {
+        color:$light-accent-text;
+      }
+    }
+  }
+  .navbar-toggler {
+    color: $light-text;
+    border-color: $light-accent-text;
+  }
+}
+
+.navbar-dark {
+  .navbar-nav {
+    .nav-link {
+      color: $dark-text;
+      &:hover,
+      &:focus {
+        color: $dark-accent-text;
+      }
+    }
+    .nav-item.active {
+      .nav-link {
+        color:$dark-accent-text;
+      }
+    }
+  }
+  .navbar-toggler {
+    color: $dark-text;
+    border-color: $dark-accent-text;
+  }
+}
+
+.elevation {
+  box-shadow: 0 0 1px 0 rgb(0 0 0 / 70%), 0 3px 4px -2px rgb(0 0 0 / 50%);
+}
+
+.dropdown-menu-light {
+  padding: 0px;
+  border: 3px solid $light-accent-background;
+  border-radius: .3rem;
+}
+
+.dropdown-menu-dark {
+  padding: 0px;
+  border: 3px solid $dark-accent-background;
+  border-radius: .3rem;
+}
+
+.dropdown-item-light {
+  color: $light-text;
+  background-color: $light-background;
+  &:hover {
+    color: $light-accent-text;
+    background-color: $light-accent-background;
+  }
+}
+
+.dropdown-item-dark {
+  color: $dark-text;
+  background-color: $dark-background;
+  &:hover {
+    color: $dark-accent-text;
+    background-color: $dark-accent-background;
+  }
+}
+
+.dark-icon {
+  color: $dark-accent-text;
+}
+
+.light-icon {
+  color: $light-accent-text;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: $dark-accent;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: rgba($dark-accent, 0.5);
+}
+
+::ng-deep .mat-slide-toggle:not(.mat-checked):not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: $light-accent;
+}
+
+::ng-deep .mat-slide-toggle:not(mat-checked):not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: rgba($light-accent, 0.3);
+}
+
+.text-light {
+  color: $light-text !important;
+}
+
+.text-light-accent {
+  color: $light-accent-text;
+}
+
+.text-dark {
+  color: $dark-text !important;
+}
+
+.text-dark-accent {
+  color: $dark-accent-text;
+}
+
+.light-accent-color {
+  color: $light-accent
+}
+
+.dark-accent-color {
+  color: $dark-accent
+}
+
+.no-margin {
+  margin: 0px;
+}
+
+.rounded-img-light {
+  border-radius: 500px;
+  max-height: 60%;
+  max-width: 60%;
+  &:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 4px 25px rgba($light-accent-text, 0.5);
+  }
+}
+
+.rounded-img-dark {
+  border-radius: 500px;
+  max-height: 60%;
+  max-width: 60%;
+  &:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 4px 25px rgba($dark-accent-text, 0.5);
+  }
+}
+
+@media(min-width: 768px) {
+    .padding-right-80 {
+        padding-right: 80px;
+    }
+    .padding-left-80 {
+        padding-left: 80px;
+    }
+}

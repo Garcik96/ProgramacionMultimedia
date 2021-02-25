@@ -1,20 +1,138 @@
-<div class="row">
-    <div class="col-6">
-        <img src="assets/ivan.jpg" class="rounded-circle">
+<div class="row align-items-center pb-5" [class.bg-light-accent]="!global.darkMode" [class.bg-dark-accent]="global.darkMode">
+    <div class="col-md-6 col-sm-12 text-center mt-5 mb-3">
+        <img src="assets/img/ivangarcia.jpg" [class.rounded-img-light]="!global.darkMode" [class.rounded-img-dark]="global.darkMode">
     </div>
-    <div class="col-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales sem et metus ultrices efficitur. Sed tempor mi eget mi congue, vel pretium ex vestibulum. Fusce placerat eros in velit tristique pharetra. Pellentesque dui tortor, pretium fermentum tortor sit amet, tincidunt venenatis sem. Nam tristique luctus tincidunt. Duis lacus orci, pulvinar vitae ipsum eget, lacinia semper nisi. Nulla enim eros, eleifend imperdiet sollicitudin eget, fringilla at augue. Fusce turpis urna, porttitor non nisl eu, semper imperdiet arcu. Vivamus odio felis, finibus non purus ut, porttitor semper nulla. Aenean condimentum est eget auctor ornare. Morbi nec lectus finibus est sollicitudin auctor sit amet at felis. Nulla congue nunc quis varius varius. Mauris iaculis nisi risus, in pellentesque erat imperdiet a. Sed ex velit, rutrum vitae justo eget, aliquam condimentum diam. Proin ut placerat sem. Mauris vehicula congue dolor, ac rutrum purus gravida sit amet.
-
-Suspendisse id egestas dui. Morbi porta blandit tempor. Sed vitae odio sit amet magna iaculis scelerisque. Integer pulvinar, lectus ultricies porttitor consectetur, tortor libero faucibus libero, et convallis nunc augue sed lorem. Integer at eros congue, ultricies elit eu, dictum leo. Sed tempus sollicitudin lectus, vel semper massa ultrices eget. Nulla facilisi. Sed quis eleifend augue, at fringilla elit. Aliquam viverra maximus efficitur. Donec ac vestibulum nulla. Donec ultrices eget felis et dignissim. Morbi ultrices magna sed velit pharetra, non dignissim ex ornare. Nunc auctor, elit quis lacinia fringilla, mi risus rhoncus nisi, eu semper arcu lorem non dolor.
+    <div class="col-md-6 col-sm-12 padding-right-80">
+        <div class="row">
+            <div class="col-12 mt-4">
+                <h2 class="no-margin" [class.text-light-accent]="!global.darkMode" [class.text-dark-accent]="global.darkMode">Iván García Ballesteros</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mt-4">
+                <p class="text-justify" [class.text-light]="!global.darkMode" [class.text-dark]="global.darkMode">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus egestas massa nulla, quis tempor elit faucibus eu. Nam sollicitudin 
+                    massa at diam sollicitudin, in efficitur nunc congue. Sed tincidunt iaculis purus nec gravida. In velit dui, euismod sed venenatis eu, 
+                    lacinia ut massa. Aliquam sed velit eu felis tincidunt molestie a sit amet sapien. Ut ac elit consequat, convallis urna sit amet, 
+                    maximus enim. Donec accumsan, nulla eget gravida vestibulum, ligula metus rutrum quam, vel hendrerit orci leo a est. Aliquam erat 
+                    volutpat. Sed ultrices ipsum et elit ullamcorper iaculis.
+                    <br><br>
+                    Praesent eget blandit dolor. Praesent nec risus pretium, suscipit mi nec, mattis arcu. Nunc feugiat et metus at elementum. Morbi 
+                    congue turpis ac ante ullamcorper elementum. Maecenas id dui vel mauris bibendum hendrerit a mattis mauris. Integer eget quam semper, 
+                    tristique nibh viverra, venenatis tellus. Curabitur non blandit libero, ac feugiat augue. Cras lobortis enim lorem, eu ultricies 
+                    mauris tincidunt non. Praesent feugiat sem lectus, nec molestie diam tempus eget. Donec vel erat et justo auctor sodales. Cras maximus 
+                    dapibus ligula a auctor. Sed viverra eu nunc vel consectetur. Phasellus hendrerit nisl sed erat dapibus, vitae varius felis suscipit. 
+                    Integer rutrum efficitur ante condimentum aliquam. Sed tincidunt purus ac nunc pulvinar pulvinar. Mauris vitae leo ut neque congue mollis.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="no-margin" [class.light-accent-color]="!global.darkMode" [class.dark-accent-color]="global.darkMode">25</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div [class.text-light]="!global.darkMode" [class.text-dark]="global.darkMode">AÑOS</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="no-margin" [class.light-accent-color]="!global.darkMode" [class.dark-accent-color]="global.darkMode">4º</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div [class.text-light]="!global.darkMode" [class.text-dark]="global.darkMode">INGENIERIA INFORMATICA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<div class="row">
-    <div class="col-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales sem et metus ultrices efficitur. Sed tempor mi eget mi congue, vel pretium ex vestibulum. Fusce placerat eros in velit tristique pharetra. Pellentesque dui tortor, pretium fermentum tortor sit amet, tincidunt venenatis sem. Nam tristique luctus tincidunt. Duis lacus orci, pulvinar vitae ipsum eget, lacinia semper nisi. Nulla enim eros, eleifend imperdiet sollicitudin eget, fringilla at augue. Fusce turpis urna, porttitor non nisl eu, semper imperdiet arcu. Vivamus odio felis, finibus non purus ut, porttitor semper nulla. Aenean condimentum est eget auctor ornare. Morbi nec lectus finibus est sollicitudin auctor sit amet at felis. Nulla congue nunc quis varius varius. Mauris iaculis nisi risus, in pellentesque erat imperdiet a. Sed ex velit, rutrum vitae justo eget, aliquam condimentum diam. Proin ut placerat sem. Mauris vehicula congue dolor, ac rutrum purus gravida sit amet.
-
-Suspendisse id egestas dui. Morbi porta blandit tempor. Sed vitae odio sit amet magna iaculis scelerisque. Integer pulvinar, lectus ultricies porttitor consectetur, tortor libero faucibus libero, et convallis nunc augue sed lorem. Integer at eros congue, ultricies elit eu, dictum leo. Sed tempus sollicitudin lectus, vel semper massa ultrices eget. Nulla facilisi. Sed quis eleifend augue, at fringilla elit. Aliquam viverra maximus efficitur. Donec ac vestibulum nulla. Donec ultrices eget felis et dignissim. Morbi ultrices magna sed velit pharetra, non dignissim ex ornare. Nunc auctor, elit quis lacinia fringilla, mi risus rhoncus nisi, eu semper arcu lorem non dolor.
+<div class="row align-items-center pb-5" [class.bg-light]="!global.darkMode" [class.bg-dark]="global.darkMode">
+    <div *ngIf="innerWidth < 768" class="col-md-6 col-sm-12 mt-5 mb-3 text-center">
+        <img src="assets/img/carlos.jpeg" [class.rounded-img-light]="!global.darkMode" [class.rounded-img-dark]="global.darkMode">
     </div>
-    <div class="col-6">
-        <img src="assets/carlos.jpg" class="rounded-circle">
+    <div class="col-md-6 col-sm-12 padding-left-80">
+        <div class="row">
+            <div class="col-12 mt-4">
+                <h2 class="no-margin" [class.text-light-accent]="!global.darkMode" [class.text-dark-accent]="global.darkMode">Carlos Uncio Veyrat</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mt-4">
+                <p class="text-justify" [class.text-light]="!global.darkMode" [class.text-dark]="global.darkMode">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus egestas massa nulla, quis tempor elit faucibus eu. Nam sollicitudin 
+                    massa at diam sollicitudin, in efficitur nunc congue. Sed tincidunt iaculis purus nec gravida. In velit dui, euismod sed venenatis eu, 
+                    lacinia ut massa. Aliquam sed velit eu felis tincidunt molestie a sit amet sapien. Ut ac elit consequat, convallis urna sit amet, 
+                    maximus enim. Donec accumsan, nulla eget gravida vestibulum, ligula metus rutrum quam, vel hendrerit orci leo a est. Aliquam erat 
+                    volutpat. Sed ultrices ipsum et elit ullamcorper iaculis.
+                    <br><br>
+                    Praesent eget blandit dolor. Praesent nec risus pretium, suscipit mi nec, mattis arcu. Nunc feugiat et metus at elementum. Morbi 
+                    congue turpis ac ante ullamcorper elementum. Maecenas id dui vel mauris bibendum hendrerit a mattis mauris. Integer eget quam semper, 
+                    tristique nibh viverra, venenatis tellus. Curabitur non blandit libero, ac feugiat augue. Cras lobortis enim lorem, eu ultricies 
+                    mauris tincidunt non. Praesent feugiat sem lectus, nec molestie diam tempus eget. Donec vel erat et justo auctor sodales. Cras maximus 
+                    dapibus ligula a auctor. Sed viverra eu nunc vel consectetur. Phasellus hendrerit nisl sed erat dapibus, vitae varius felis suscipit. 
+                    Integer rutrum efficitur ante condimentum aliquam. Sed tincidunt purus ac nunc pulvinar pulvinar. Mauris vitae leo ut neque congue mollis.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="no-margin" [class.light-accent-color]="!global.darkMode" [class.dark-accent-color]="global.darkMode">22</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div [class.text-light]="!global.darkMode" [class.text-dark]="global.darkMode">AÑOS</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="no-margin" [class.light-accent-color]="!global.darkMode" [class.dark-accent-color]="global.darkMode">4º</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div [class.text-light]="!global.darkMode" [class.text-dark]="global.darkMode">INGENIERIA INFORMATICA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="innerWidth > 768" class="col-md-6 col-sm-12 text-center mt-5">
+        <img src="assets/img/carlos.jpeg" [class.rounded-img-light]="!global.darkMode" [class.rounded-img-dark]="global.darkMode">
+    </div>
+</div>
+<div class="row text-center" [class.bg-light-accent]="!global.darkMode" [class.bg-dark-accent]="global.darkMode">
+    <div class="col-12 mt-4">
+        <h1 [class.light-accent-color]="!global.darkMode" [class.dark-accent-color]="global.darkMode">Nuestras habilidades</h1>
+    </div>
+    <div class="col-12 pb-5 mt-3">
+        <div *ngIf="!global.darkMode" style="display: block">
+            <canvas baseChart
+                [datasets]="radarChartData"
+                [options]="radarChartOptionsLight"
+                [labels]="radarChartLabels"
+                [chartType]="radarChartType">
+            </canvas>
+        </div>
+        <div *ngIf="global.darkMode" style="display: block">
+            <canvas baseChart
+                [datasets]="radarChartData"
+                [options]="radarChartOptionsDark"
+                [labels]="radarChartLabels"
+                [chartType]="radarChartType">
+            </canvas>
+        </div>
     </div>
 </div>

@@ -6,7 +6,7 @@ import { HomeModule } from './home/home.module';
 import { NuestrosTrabajosModule } from './nuestros-trabajos/nuestros-trabajos.module';
 import { ContactoModule } from './contacta-con-nosotros/contacta-con-nosotros.module';
 
-import { AppComponent } from './app.component';
+import { AppComponent, Global } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -24,7 +24,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FontAwesomeModule,
     ContactoModule
   ],
-  providers: [],
+  providers: [Global],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
