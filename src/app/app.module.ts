@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarModule } from './navbar/navbar.module';
 import { HomeModule } from './home/home.module';
+import { FooterModule } from './footer/footer.module';
 import { NuestrosTrabajosModule } from './nuestros-trabajos/nuestros-trabajos.module';
 import { ContactoModule } from './contacta-con-nosotros/contacta-con-nosotros.module';
 
@@ -11,14 +12,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NavbarModule,
     HomeModule,
+    FooterModule,
     NuestrosTrabajosModule,
     BrowserAnimationsModule,
     FontAwesomeModule,

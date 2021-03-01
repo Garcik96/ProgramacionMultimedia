@@ -6,7 +6,7 @@ import { Label } from 'ng2-charts';
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
-  styleUrls: ['../app.component.scss', './home.component.scss']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
   innerWidth: any;

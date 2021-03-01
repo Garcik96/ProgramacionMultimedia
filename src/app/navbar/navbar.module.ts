@@ -8,9 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
-    declarations: [
-        NavbarComponent
-    ],
+    declarations: [NavbarComponent],
     imports: [
         RouterModule,
         BrowserModule,
@@ -19,8 +17,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         FontAwesomeModule,
         CommonModule
     ],
-    exports: [
-        NavbarComponent
-    ]
+    exports: [NavbarComponent]
 })
 export class NavbarModule {}

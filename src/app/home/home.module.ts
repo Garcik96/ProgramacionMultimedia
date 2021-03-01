@@ -5,7 +5,10 @@ import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
     declarations: [HomeComponent],
-    imports: [CommonModule, ChartsModule],
+    imports: [
+        CommonModule,
+        ChartsModule
+    ],
     exports: [HomeComponent]
 })
 export class HomeModule {}

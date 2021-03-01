@@ -1,0 +1,20 @@
+$dark-accent: #8a85ff;
+$dark-accent-text: #e6e5e8;
+$dark-text: #adb0bb;
+$light-accent: #5850EC;
+
+.bg-footer {
+    background-color: $dark-accent;
+}
+
+.bg-footer-accent {
+    background-color: $light-accent;
+}
+
+.footer-text {
+    color: $dark-text;
+}
+
+.footer-text-accent {
+    color: $dark-accent-text;
+}

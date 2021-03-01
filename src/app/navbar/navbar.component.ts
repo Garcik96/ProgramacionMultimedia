@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Global } from '../app.component';
-import { faMoon } from '@fortawesome/free-solid-svg-icons';
-import { faSun } from '@fortawesome/free-solid-svg-icons';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'navbar',

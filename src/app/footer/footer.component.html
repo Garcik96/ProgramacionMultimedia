@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="row bg-footer justify-content-center text-center py-5">
+        <div class="col-2">
+            <fa-icon [icon]="twitterIcon()" size="5x"></fa-icon>
+        </div>
+        <div class="col-2 mx-4">
+            <fa-icon [icon]="instagramIcon()" size="5x"></fa-icon>
+        </div>
+        <div class="col-2">
+            <fa-icon [icon]="linkedinIcon()" size="5x"></fa-icon>
+        </div>
+    </div>
+    <div class="row bg-footer-accent py-4">
+        <div class="col-12 text-center">
+            <div><span class="footer-text">© {{ today | date: 'yyyy' }} Copyright </span><span class="footer-text-accent">Iván García Ballesteros y Carlos Uncio Veyrat</span></div>
+        </div>
+    </div>
+</div>

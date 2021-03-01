@@ -1,0 +1,34 @@
+<!-- <h1>Hola</h1>
+<video autoplay loop style="width: 500px;" #video>
+    <source src="../../../assets/video/mov_bbb.mp4" type="video/mp4"/>    
+</video>
+<div>
+    <button (click)="playPauseVideo(video)">Prueba</button>
+</div> -->
+
+<div class="row py-5" [class.bg-light-accent]="!global.darkMode" [class.bg-dark-accent]="global.darkMode">
+    <div class="col-12 text-center">
+        <h1 [class.light-accent-color]="!global.darkMode" [class.dark-accent-color]="global.darkMode">Conoce todos nuestros videos</h1>
+    </div>
+</div>
+<div class="row py-5" [class.bg-light]="!global.darkMode" [class.bg-dark]="global.darkMode">
+    <div class="col-md-6 col-sm-12">
+        <multimedia-video></multimedia-video>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <p class="text-justify" [class.text-light]="!global.darkMode" [class.text-dark]="global.darkMode">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus egestas massa nulla, quis tempor elit faucibus eu. Nam sollicitudin 
+            massa at diam sollicitudin, in efficitur nunc congue. Sed tincidunt iaculis purus nec gravida. In velit dui, euismod sed venenatis eu, 
+            lacinia ut massa. Aliquam sed velit eu felis tincidunt molestie a sit amet sapien. Ut ac elit consequat, convallis urna sit amet, 
+            maximus enim. Donec accumsan, nulla eget gravida vestibulum, ligula metus rutrum quam, vel hendrerit orci leo a est. Aliquam erat 
+            volutpat. Sed ultrices ipsum et elit ullamcorper iaculis.
+            <br><br>
+            Praesent eget blandit dolor. Praesent nec risus pretium, suscipit mi nec, mattis arcu. Nunc feugiat et metus at elementum. Morbi 
+            congue turpis ac ante ullamcorper elementum. Maecenas id dui vel mauris bibendum hendrerit a mattis mauris. Integer eget quam semper, 
+            tristique nibh viverra, venenatis tellus. Curabitur non blandit libero, ac feugiat augue. Cras lobortis enim lorem, eu ultricies 
+            mauris tincidunt non. Praesent feugiat sem lectus, nec molestie diam tempus eget. Donec vel erat et justo auctor sodales. Cras maximus 
+            dapibus ligula a auctor. Sed viverra eu nunc vel consectetur. Phasellus hendrerit nisl sed erat dapibus, vitae varius felis suscipit. 
+            Integer rutrum efficitur ante condimentum aliquam. Sed tincidunt purus ac nunc pulvinar pulvinar. Mauris vitae leo ut neque congue mollis.
+        </p>
+    </div>
+</div>

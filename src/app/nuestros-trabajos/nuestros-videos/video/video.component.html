@@ -1,0 +1,12 @@
+<video class="w-100" #video>
+    <source src="../../../assets/video/mov_bbb.mp4" type="video/mp4"/>
+</video>
+<button *ngIf="!play" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="playVideo()">
+    <mat-icon>play_arrow</mat-icon>
+</button>
+<button *ngIf="play" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="pauseVideo()">
+    <mat-icon>pause</mat-icon>
+</button>
+<button class="ml-3" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="stopVideo()">
+    <mat-icon>stop</mat-icon>
+</button>

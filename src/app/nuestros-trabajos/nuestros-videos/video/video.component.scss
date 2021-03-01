@@ -1,0 +1,16 @@
+$light-accent: #5850EC;
+$light-background: #ffffff;
+$light-accent-text: #263238;
+$dark-accent: #8a85ff;
+$dark-background: #282C34;
+$dark-accent-text: #e6e5e8;
+
+.dark-button {
+    background-color: $dark-accent;
+    color: $dark-background;
+}
+
+.light-button {
+    background-color: $light-accent;
+    color: $light-background;
+}
