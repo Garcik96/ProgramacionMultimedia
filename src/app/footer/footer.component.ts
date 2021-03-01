@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Global } from '../app.component';
-import { faLinkedin, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'footer',
@@ -23,11 +23,31 @@ export class FooterComponent implements OnInit {
     return faLinkedin;
   }
 
+  linkedinRedirect(): void {
+    window.location.href = 'https://www.linkedin.com/feed/';
+  }
+
   twitterIcon(): any {
     return faTwitter;
   }
 
+  twitterRedirect(): void {
+    window.location.href = 'https://twitter.com/home';
+  }
+
   instagramIcon(): any {
     return faInstagram;
+  }
+
+  instagramRedirect(): void {
+    window.location.href = 'https://www.instagram.com/';
+  }
+
+  githubIcon(): any {
+    return faGithub;
+  }
+
+  githubRedirect(): void {
+    window.location.href = 'https://github.com/Garcik96/ProgramacionMultimedia';
   }
 }
