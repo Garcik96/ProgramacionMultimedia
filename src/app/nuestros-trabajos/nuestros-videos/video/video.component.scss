@@ -10,11 +10,17 @@ $dark-accent-text: #e6e5e8;
 .dark-button {
     background-color: $dark-accent;
     color: $dark-background;
+    &:focus {
+        outline: 0px;
+    }
 }
 
 .light-button {
     background-color: $light-accent;
     color: $light-background;
+    &:focus {
+        outline: 0px;
+    }
 }
 
 .slider-volume-dark ::ng-deep {
@@ -61,6 +67,10 @@ $dark-accent-text: #e6e5e8;
     top: -35px;
 }
 
+.top-volume {
+    top: -38px;
+}
+
 .mat-mini-fab.mat-button-disabled.mat-button-disabled {
     background-color: rgba(white, 0.0) !important;
 }
@@ -75,4 +85,9 @@ $dark-accent-text: #e6e5e8;
 
 .container-buttons {
     height: 35px;
+    display: inline-flex;
+}
+
+video:hover {
+    opacity: 0.5;
 }
