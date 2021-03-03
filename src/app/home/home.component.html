@@ -1,8 +1,8 @@
 <div class="row align-items-center pb-5" [class.bg-light-accent]="!global.darkMode" [class.bg-dark-accent]="global.darkMode">
-    <div class="col-md-6 col-sm-12 text-center mt-5 mb-3">
+    <div class="col-lg-6 col-md-12 text-center mt-5 mb-3">
         <img src="assets/img/ivangarcia.jpg" [class.rounded-img-light]="!global.darkMode" [class.rounded-img-dark]="global.darkMode">
     </div>
-    <div class="col-md-6 col-sm-12 padding-right-80">
+    <div class="col-lg-6 col-md-12 padding-right-80" [class.padding-left-80]="innerWidth < 992">
         <div class="row">
             <div class="col-12 mt-4">
                 <h2 class="no-margin" [class.text-light-accent]="!global.darkMode" [class.text-dark-accent]="global.darkMode">Iván García Ballesteros</h2>
@@ -55,10 +55,10 @@
     </div>
 </div>
 <div class="row align-items-center pb-5" [class.bg-light]="!global.darkMode" [class.bg-dark]="global.darkMode">
-    <div *ngIf="innerWidth < 768" class="col-md-6 col-sm-12 mt-5 mb-3 text-center">
+    <div *ngIf="innerWidth < 992" class="col-lg-6 col-md-12 mt-5 mb-3 text-center">
         <img src="assets/img/carlos.jpeg" [class.rounded-img-light]="!global.darkMode" [class.rounded-img-dark]="global.darkMode">
     </div>
-    <div class="col-md-6 col-sm-12 padding-left-80">
+    <div class="col-lg-6 col-md-12 padding-left-80" [class.padding-right-80]="innerWidth < 992">
         <div class="row">
             <div class="col-12 mt-4">
                 <h2 class="no-margin" [class.text-light-accent]="!global.darkMode" [class.text-dark-accent]="global.darkMode">Carlos Uncio Veyrat</h2>
@@ -109,7 +109,7 @@
             </div>
         </div>
     </div>
-    <div *ngIf="innerWidth > 768" class="col-md-6 col-sm-12 text-center mt-5">
+    <div *ngIf="innerWidth > 992" class="col-lg-6 col-md-12 text-center mt-5">
         <img src="assets/img/carlos.jpeg" [class.rounded-img-light]="!global.darkMode" [class.rounded-img-dark]="global.darkMode">
     </div>
 </div>
