@@ -4,6 +4,8 @@ import { NuestrosVideosComponent } from './nuestros-videos/nuestros-videos.compo
 import { MaterialModule } from '../material.module';
 import { CommonModule } from '@angular/common';
 import { MultimediaVideosComponent } from './nuestros-videos/video/video.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -13,7 +15,9 @@ import { MultimediaVideosComponent } from './nuestros-videos/video/video.compone
     ],
     imports: [
         MaterialModule,
-        CommonModule
+        CommonModule,
+        FontAwesomeModule,
+        FormsModule
     ],
     exports: [
         NuestrosAudiosComponent,

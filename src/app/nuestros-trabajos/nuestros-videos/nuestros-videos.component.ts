@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Global } from '../../app.component';
 
 @Component({
@@ -7,26 +7,16 @@ import { Global } from '../../app.component';
   styleUrls: ['./nuestros-videos.component.scss']
 })
 export class NuestrosVideosComponent implements OnInit {
-  @ViewChild('video') myVideo: ElementRef;
-  play = false;
+  innerWidth: any;
 
   constructor(public global: Global) { }
 
   ngOnInit(): void {
+    this.innerWidth = window.innerWidth;
   }
 
-  playVideo(video: any): void {
-    video.play();
-    this.play = true;
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
   }
-
-  pauseVideo(video: any): void {
-    video.pause();
-    this.play = false;
-  }
-
-  stopVideo(video: any): void {
-    this.myVideo.nativeElement.currentTime = 0;
-  }
-
 }

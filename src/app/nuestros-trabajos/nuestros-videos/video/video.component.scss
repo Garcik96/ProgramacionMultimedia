@@ -1,8 +1,10 @@
 $light-accent: #5850EC;
 $light-background: #ffffff;
+$light-text: #546e7a;
 $light-accent-text: #263238;
 $dark-accent: #8a85ff;
 $dark-background: #282C34;
+$dark-text: #adb0bb;
 $dark-accent-text: #e6e5e8;
 
 .dark-button {
@@ -13,4 +15,64 @@ $dark-accent-text: #e6e5e8;
 .light-button {
     background-color: $light-accent;
     color: $light-background;
+}
+
+.slider-volume-dark ::ng-deep {
+    .mat-slider-thumb {
+        background-color: $dark-accent;
+    }
+    .mat-slider-track-background {
+        background-color: $dark-text;
+    }
+    .mat-slider-track-fill {
+        background-color: $dark-accent;
+    }
+    .mat-slider-thumb-label {
+        background-color: $dark-accent;
+    }
+    .mat-slider-thumb-label-text {
+        color: $dark-background;
+    }
+}
+
+.slider-volume-light ::ng-deep {
+    .mat-slider-thumb {
+        background-color: $light-accent;
+    }
+    .mat-slider-track-background {
+        background-color: $light-text;
+    }
+    .mat-slider-track-fill {
+        background-color: $light-accent;
+    }
+    .mat-slider-thumb-label {
+        background-color: $light-accent;
+    }
+    .mat-slider-thumb-label-text {
+        color: $light-background;
+    }
+}
+  
+.mat-slider-horizontal {
+    width: 50%;
+}
+
+.top-button {
+    top: -35px;
+}
+
+.mat-mini-fab.mat-button-disabled.mat-button-disabled {
+    background-color: rgba(white, 0.0) !important;
+}
+
+.volume-icon-dark {
+    color: $light-background;
+}
+
+.volume-icon-light {
+    color: $dark-background;
+}
+
+.container-buttons {
+    height: 35px;
 }

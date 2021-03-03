@@ -1,12 +1,42 @@
-<video class="w-100" #video>
+<video class="w-100" #video (click)="playPauseVideo()">
     <source src="../../../assets/video/mov_bbb.mp4" type="video/mp4"/>
 </video>
-<button *ngIf="!play" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="playVideo()">
-    <mat-icon>play_arrow</mat-icon>
-</button>
-<button *ngIf="play" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="pauseVideo()">
-    <mat-icon>pause</mat-icon>
-</button>
-<button class="ml-3" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="stopVideo()">
-    <mat-icon>stop</mat-icon>
-</button>
+<mat-slider
+    class="w-100 time"
+    [class.time-light]="!global.darkMode"
+    [class.time-dark]="global.darkMode"
+    [max]="maxValue"
+    min="0"
+    step="1"
+    thumbLabel="false"
+    [(ngModel)]="valueVideo"
+    (input)="changeTime($event)">
+
+</mat-slider>
+<div class="w-100 container-buttons">
+    <button *ngIf="!play" class="top-button" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="playPauseVideo()">
+        <mat-icon>play_arrow</mat-icon>
+    </button>
+    <button *ngIf="play" class="top-button" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="playPauseVideo()">
+        <mat-icon>pause</mat-icon>
+    </button>
+    <button class="ml-3 top-button" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="stopVideo()">
+        <mat-icon>stop</mat-icon>
+    </button>
+    <button class="ml-1 top-button volume-button" mat-mini-fab disabled (click)="stopVideo()">
+        <mat-icon [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode" *ngIf="volume == 0">volume_mute</mat-icon>
+        <mat-icon [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode" *ngIf="volume > 0 && volume <= 40">volume_down</mat-icon>
+        <mat-icon [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode" *ngIf="volume > 40">volume_up</mat-icon>
+    </button>
+    <mat-slider
+        class="top-button"
+        max="100"
+        min="0"
+        step="1"
+        thumbLabel="true"
+        [(ngModel)]="volume"
+        (change)="changeVolume($event)"
+        [class.slider-volume-light]="!global.darkMode"
+        [class.slider-volume-dark]="global.darkMode">
+    </mat-slider>
+</div>
