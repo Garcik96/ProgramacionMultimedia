@@ -1,15 +1,4 @@
-/* ------------------ Paleta de colores ------------------ */
-$light-background: #ffffff;
-$light-accent-background: #f4f6f8;
-$light-accent-text: #263238;
-$light-text: #546e7a;
-$light-accent: #5850EC;
-
-$dark-background: #282C34;
-$dark-accent-background: #1c2025;
-$dark-accent-text: #e6e5e8;
-$dark-text: #adb0bb;
-$dark-accent: #8a85ff;
+@import './paleta-colores.scss';
 
 /* ------------------------ General ----------------------- */
 html, body { height: 100%; }

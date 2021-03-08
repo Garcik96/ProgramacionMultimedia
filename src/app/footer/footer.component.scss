@@ -1,7 +1,4 @@
-$dark-accent: #8a85ff;
-$dark-accent-text: #e6e5e8;
-$dark-text: #adb0bb;
-$light-accent: #5850EC;
+@import '../../paleta-colores.scss';
 
 .bg-footer {
     background-color: $dark-accent;

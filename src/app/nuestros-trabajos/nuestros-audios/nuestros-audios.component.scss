@@ -1,0 +1,81 @@
+@import '../../../paleta-colores.scss';
+
+::ng-deep .dark-select.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: $dark-text;
+}
+
+::ng-deep .dark-select .mat-select-arrow {
+    color: $dark-accent;
+}
+
+::ng-deep .dark-select .mat-select-value {
+    color: $dark-accent;
+}
+
+::ng-deep .dark-select.mat-form-field-appearance-outline .mat-form-field-label { 
+    color: $dark-text;
+}
+
+::ng-deep .dark-panel .mat-option-text {
+    color: $dark-text;
+}
+
+::ng-deep .dark-panel .mat-option-text:hover:not(.mat-option-disabled) {
+    color: $dark-accent;
+}
+
+::ng-deep .dark-panel.mat-select-panel {
+    background: $dark-background;
+}
+
+::ng-deep .dark-panel.mat-select-panel:not([class*=mat-elevation-z]) {
+    box-shadow: 0px 2px 4px -1px rgb(230 229 232 / 20%), 0px 4px 5px 0px rgb(230 229 232 / 14%), 0px 1px 10px 0px rgb(230 229 232 / 12%);
+}
+
+::ng-deep .dark-panel.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+    background: $dark-accent-background;
+}
+
+::ng-deep .dark-panel .mat-option:hover:not(.mat-option-disabled), .mat-option:focus:not(.mat-option-disabled) {
+    background: rgba($dark-accent-background, 0.3);
+}
+
+::ng-deep .light-select.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: $light-text;
+}
+
+::ng-deep .light-select .mat-select-arrow {
+    color: $light-accent;
+}
+
+::ng-deep .light-select .mat-select-value {
+    color: $light-accent;
+}
+
+::ng-deep .light-select.mat-form-field-appearance-outline .mat-form-field-label { 
+    color: $light-text;
+}
+
+::ng-deep .light-panel .mat-option-text {
+    color: $light-text;
+}
+
+::ng-deep .light-panel .mat-option-text:hover:not(.mat-option-disabled) {
+    color: $light-accent;
+}
+
+::ng-deep .light-panel.mat-select-panel {
+    background: $light-background;
+}
+
+::ng-deep .light-panel.mat-select-panel:not([class*=mat-elevation-z]) {
+    box-shadow: 0px 2px 4px -1px rgb(38 50 56 / 20%), 0px 4px 5px 0px rgb(38 50 56 / 14%), 0px 1px 10px 0px rgb(38 50 56 / 12%);
+}
+
+::ng-deep .light-panel.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+    background: $light-accent-background;
+}
+
+::ng-deep .light-panel .mat-option:hover:not(.mat-option-disabled), .mat-option:focus:not(.mat-option-disabled) {
+    background: rgba($light-accent-background, 0.3);
+}

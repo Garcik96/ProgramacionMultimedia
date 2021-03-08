@@ -1,0 +1,56 @@
+<audio #audio>
+    <source [src]="path" type="audio/mp3"/>
+</audio>
+<div class="row justify-content-center">
+    <div class="col-12" [class.light-accent-color]="!global.darkMode" [class.dark-accent-color]="global.darkMode">
+        <h3>{{ fileName }}</h3>
+    </div>
+    <div class="col-md-12 col-lg-7">
+        <mat-slider
+            class="w-100"
+            max="100"
+            min="0"
+            step="1"
+            thumbLabel="false"
+            [(ngModel)]="valueAudio"
+            (input)="changeTime($event)"
+            [class.slider-volume-light]="!global.darkMode"
+            [class.slider-volume-dark]="global.darkMode">
+        </mat-slider>
+    </div>
+    <div class="col-md-12 col-lg-7" [class.padding-left-80]="innerWidth < 992" [class.padding-right-80]="innerWidth < 992">
+        <div class="w-100 container-buttons">
+            <button class="top-button" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="fastRewindAudio()">
+                <mat-icon>fast_rewind</mat-icon>
+            </button>
+            <button *ngIf="!play" class="ml-3" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="playPauseAudio()">
+                <mat-icon>play_arrow</mat-icon>
+            </button>
+            <button *ngIf="play" class="ml-3" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="playPauseAudio()">
+                <mat-icon>pause</mat-icon>
+            </button>
+            <button class="ml-3 top-button" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="fastForwardAudio()">
+                <mat-icon>fast_forward</mat-icon>
+            </button>
+            <button class="ml-3" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="stopAudio()">
+                <mat-icon>stop</mat-icon>
+            </button>
+            <button class="ml-1 volume-button" mat-mini-fab disabled>
+                <mat-icon [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode" *ngIf="volume == 0">volume_mute</mat-icon>
+                <mat-icon [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode" *ngIf="volume > 0 && volume <= 40">volume_down</mat-icon>
+                <mat-icon [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode" *ngIf="volume > 40">volume_up</mat-icon>
+            </button>
+            <mat-slider
+                class="top-volume w-100"
+                max="100"
+                min="0"
+                step="1"
+                thumbLabel="true"
+                [(ngModel)]="volume"
+                (change)="changeVolume($event)"
+                [class.slider-volume-light]="!global.darkMode"
+                [class.slider-volume-dark]="global.darkMode">
+            </mat-slider>
+        </div>
+    </div>
+</div>

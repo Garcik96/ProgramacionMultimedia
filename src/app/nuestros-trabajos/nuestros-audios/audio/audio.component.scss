@@ -56,14 +56,6 @@
     width: 50%;
 }
 
-.top-button {
-    top: -35px;
-}
-
-.top-volume {
-    top: -38px;
-}
-
 .mat-mini-fab.mat-button-disabled.mat-button-disabled {
     background-color: rgba(white, 0.0) !important;
 }
@@ -81,6 +73,6 @@
     display: inline-flex;
 }
 
-video:hover {
-    opacity: 0.5;
+.top-volume {
+    top: -4px;
 }

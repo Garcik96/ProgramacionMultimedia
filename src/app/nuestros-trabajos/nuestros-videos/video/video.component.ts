@@ -90,14 +90,4 @@ export class MultimediaVideosComponent implements OnInit, AfterViewInit {
   changeVolume(event: any) {
     this.video.nativeElement.volume = event.value / 100;
   }
-
-  volumeUpIcon(): any {
-    if(this.volume === 0) {
-      return faVolumeMute;
-    } else if(this.volume <= 30){
-      return faVolumeDown;
-    } else {
-      return faVolumeUp;
-    }
-  }
 }

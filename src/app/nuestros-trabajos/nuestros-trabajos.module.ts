@@ -4,20 +4,23 @@ import { NuestrosVideosComponent } from './nuestros-videos/nuestros-videos.compo
 import { MaterialModule } from '../material.module';
 import { CommonModule } from '@angular/common';
 import { MultimediaVideosComponent } from './nuestros-videos/video/video.component';
+import { MultimediaAudiosComponent } from './nuestros-audios/audio/audio.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
         NuestrosAudiosComponent,
         NuestrosVideosComponent,
-        MultimediaVideosComponent
+        MultimediaVideosComponent,
+        MultimediaAudiosComponent
     ],
     imports: [
         MaterialModule,
         CommonModule,
         FontAwesomeModule,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule
     ],
     exports: [
         NuestrosAudiosComponent,
