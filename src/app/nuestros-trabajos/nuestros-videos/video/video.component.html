@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-12">
-        <video class="w-100 video" #video (click)="playPauseVideo()">
-            <source src="./assets/video/lebron.mp4" type="video/mp4"/>
+        <video class="w-100 video" #video (click)="playPauseVideo()" (loadedmetadata)="getDuration($event)">
+            <source [src]="path" type="video/mp4"/>
         </video>
         <mat-slider
             class="w-100 time"
@@ -20,25 +20,23 @@
             <button class="top-button" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="fastRewindVideo()">
                 <mat-icon>fast_rewind</mat-icon>
             </button>
-            <button *ngIf="!play" class="ml-3 top-button" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="playPauseVideo()">
+            <button *ngIf="!play" class="mx-2 top-button" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="playPauseVideo()">
                 <mat-icon>play_arrow</mat-icon>
             </button>
-            <button *ngIf="play" class="ml-3 top-button" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="playPauseVideo()">
+            <button *ngIf="play" class="mx-2 top-button" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="playPauseVideo()">
                 <mat-icon>pause</mat-icon>
             </button>
-            <button class="ml-3 top-button" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="fastForwardVideo()">
+            <button class="top-button" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="fastForwardVideo()">
                 <mat-icon>fast_forward</mat-icon>
             </button>
-            <button class="ml-3 top-button" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="stopVideo()">
+            <button class="ml-2 top-button" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="stopVideo()">
                 <mat-icon>stop</mat-icon>
             </button>
-            <button class="ml-1 top-button volume-button" mat-mini-fab disabled>
-                <mat-icon [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode" *ngIf="volume == 0">volume_mute</mat-icon>
-                <mat-icon [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode" *ngIf="volume > 0 && volume <= 40">volume_down</mat-icon>
-                <mat-icon [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode" *ngIf="volume > 40">volume_up</mat-icon>
-            </button>
+            <mat-icon class="ml-2 mr-1 top-icon" [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode" *ngIf="volume == 0">volume_mute</mat-icon>
+            <mat-icon class="ml-2 mr-1 top-icon" [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode" *ngIf="volume > 0 && volume <= 40">volume_down</mat-icon>
+            <mat-icon class="ml-2 mr-1 top-icon" [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode" *ngIf="volume > 40">volume_up</mat-icon>
             <mat-slider
-                class="top-volume w-100"
+                class="top-volume"
                 [max]="maxValue"
                 min="0"
                 step="1"
@@ -48,9 +46,24 @@
                 [class.slider-volume-light]="!global.darkMode"
                 [class.slider-volume-dark]="global.darkMode">
             </mat-slider>
-            <button class="ml-3 top-button" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="fullscreenVideo()">
+            <button class="ml-1 mr-2 top-button" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="fullscreenVideo()">
                 <mat-icon>fullscreen</mat-icon>
             </button>
+            <div class="top-time" [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode">
+                {{ currentMinutesVideo }}'
+            </div>
+            <div class="top-time" [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode">
+                {{ currentSecondsVideo }}''
+            </div>
+            <div class="top-time" [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode">
+                /
+            </div>
+            <div class="top-time" [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode">
+                {{ minutesVideo }}'
+            </div>
+            <div class="top-time" [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode">
+                {{ secondsVideo }}''
+            </div>
         </div>
     </div>
 </div>

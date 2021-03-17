@@ -19,6 +19,10 @@ export class MultimediaAudiosComponent implements OnInit, OnChanges, AfterViewIn
   interval = interval(100);
   intervalSubscribe: any;
   playbackRate: number = 1;
+  minutesAudio: number;
+  currentMinutesAudio: number = 0;
+  secondsAudio: number;
+  currentSecondsAudio: number = 0;
     
   constructor(public global: Global) { 
   }
@@ -44,6 +48,11 @@ export class MultimediaAudiosComponent implements OnInit, OnChanges, AfterViewIn
     }
   }
 
+  getDuration(event: any): void {
+    this.minutesAudio = Math.trunc(this.audio.nativeElement.duration / 60);
+    this.secondsAudio = Math.trunc(this.audio.nativeElement.duration % 60);
+  }
+
   playPauseAudio(): void {
     if(!this.audio.nativeElement.paused && !this.audio.nativeElement.ended) {
       this.audio.nativeElement.pause();
@@ -64,12 +73,16 @@ export class MultimediaAudiosComponent implements OnInit, OnChanges, AfterViewIn
     this.playbackRate = 1;
     this.audio.nativeElement.playbackRate = 1;
     this.play = false;
+    this.currentMinutesAudio = 0;
+    this.currentSecondsAudio = 0;
   }
 
   update(): any {
     if(!this.audio.nativeElement.ended) {
       let value = this.audio.nativeElement.currentTime * this.maxValue / this.audio.nativeElement.duration;
       this.valueAudio = value;
+      this.currentMinutesAudio = Math.trunc(this.audio.nativeElement.currentTime / 60);
+      this.currentSecondsAudio = Math.trunc(this.audio.nativeElement.currentTime % 60);
     } else {
       this.stopAudio();
     }

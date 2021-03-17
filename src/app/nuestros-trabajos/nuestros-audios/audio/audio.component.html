@@ -1,11 +1,11 @@
-<audio #audio>
+<audio #audio (loadedmetadata)="getDuration($event)">
     <source [src]="path" type="audio/mp3"/>
 </audio>
 <div class="row justify-content-center">
     <div class="col-12" [class.light-accent-color]="!global.darkMode" [class.dark-accent-color]="global.darkMode">
         <h3>{{ fileName }}</h3>
     </div>
-    <div class="col-md-12 col-lg-7">
+    <div class="col-md-12 col-lg-7" [class.padding-left-80]="innerWidth < 992" [class.padding-right-80]="innerWidth < 992">
         <mat-slider
             class="w-100"
             max="100"
@@ -20,28 +20,26 @@
     </div>
     <div class="col-md-12 col-lg-7" [class.padding-left-80]="innerWidth < 992" [class.padding-right-80]="innerWidth < 992">
         <div class="w-100 container-buttons">
-            <button class="top-button" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="fastRewindAudio()">
+            <button mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="fastRewindAudio()">
                 <mat-icon>fast_rewind</mat-icon>
             </button>
-            <button *ngIf="!play" class="ml-3" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="playPauseAudio()">
+            <button *ngIf="!play" class="mx-2" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="playPauseAudio()">
                 <mat-icon>play_arrow</mat-icon>
             </button>
-            <button *ngIf="play" class="ml-3" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="playPauseAudio()">
+            <button *ngIf="play" class="mx-2" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="playPauseAudio()">
                 <mat-icon>pause</mat-icon>
             </button>
-            <button class="ml-3 top-button" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="fastForwardAudio()">
+            <button mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="fastForwardAudio()">
                 <mat-icon>fast_forward</mat-icon>
             </button>
-            <button class="ml-3" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="stopAudio()">
+            <button class="ml-2" mat-mini-fab [class.light-button]="!global.darkMode" [class.dark-button]="global.darkMode" (click)="stopAudio()">
                 <mat-icon>stop</mat-icon>
             </button>
-            <button class="ml-1 volume-button" mat-mini-fab disabled>
-                <mat-icon [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode" *ngIf="volume == 0">volume_mute</mat-icon>
-                <mat-icon [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode" *ngIf="volume > 0 && volume <= 40">volume_down</mat-icon>
-                <mat-icon [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode" *ngIf="volume > 40">volume_up</mat-icon>
-            </button>
+            <mat-icon class="top-icon ml-2 mr-1" [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode" *ngIf="volume == 0">volume_mute</mat-icon>
+            <mat-icon class="top-icon ml-2 mr-1" [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode" *ngIf="volume > 0 && volume <= 40">volume_down</mat-icon>
+            <mat-icon class="top-icon ml-2 mr-1" [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode" *ngIf="volume > 40">volume_up</mat-icon>
             <mat-slider
-                class="top-volume w-100"
+                class="top-volume"
                 max="100"
                 min="0"
                 step="1"
@@ -51,6 +49,21 @@
                 [class.slider-volume-light]="!global.darkMode"
                 [class.slider-volume-dark]="global.darkMode">
             </mat-slider>
+            <div class="ml-2 top-time" [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode">
+                {{ currentMinutesAudio }}'
+            </div>
+            <div class="top-time" [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode">
+                {{ currentSecondsAudio }}''
+            </div>
+            <div class="mx-1 top-time" [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode">
+                /
+            </div>
+            <div class="top-time" [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode">
+                {{ minutesAudio }}'
+            </div>
+            <div class="top-time" [class.volume-icon-light]="!global.darkMode" [class.volume-icon-dark]="global.darkMode">
+                {{ secondsAudio }}''
+            </div>
         </div>
     </div>
 </div>

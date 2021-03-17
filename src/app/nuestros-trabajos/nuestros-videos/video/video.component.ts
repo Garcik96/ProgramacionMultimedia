@@ -1,6 +1,5 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Global } from '../../../app.component';
-import { faVolumeUp, faVolumeMute, faVolumeDown } from '@fortawesome/free-solid-svg-icons';
 import { interval } from 'rxjs';
 
 @Component({
@@ -17,13 +16,32 @@ export class MultimediaVideosComponent implements OnInit, AfterViewInit {
   interval = interval(100);
   intervalSubscribe: any;
   playbackRate: number = 1;
+  path: string = './assets/video/lebron.mp4';
+  minutesVideo: number;
+  currentMinutesVideo: number = 0;
+  secondsVideo: number;
+  currentSecondsVideo: number = 0;
+  innerWidth: any;
 
   constructor(public global: Global) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.innerWidth = window.innerWidth;
+  }
 
   ngAfterViewInit(): void {
     this.video.nativeElement.volume = this.volume;
+    this.video.nativeElement.src = this.path;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
+  }
+
+  getDuration(event: any): void {
+    this.minutesVideo = Math.trunc(this.video.nativeElement.duration / 60);
+    this.secondsVideo = Math.trunc(this.video.nativeElement.duration % 60);
   }
 
   playPauseVideo(): void {
@@ -46,12 +64,16 @@ export class MultimediaVideosComponent implements OnInit, AfterViewInit {
     this.playbackRate = 1;
     this.video.nativeElement.playbackRate = 1;
     this.play = false;
+    this.currentMinutesVideo = 0;
+    this.currentSecondsVideo = 0;
   }
 
   update(): any {
     if(!this.video.nativeElement.ended) {
       let value = this.video.nativeElement.currentTime * this.maxValue / this.video.nativeElement.duration;
       this.valueVideo = value;
+      this.currentMinutesVideo = Math.trunc(this.video.nativeElement.currentTime / 60);
+      this.currentSecondsVideo = Math.trunc(this.video.nativeElement.currentTime % 60);
     } else {
       this.stopVideo();
     }

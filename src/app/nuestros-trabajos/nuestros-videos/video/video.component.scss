@@ -64,8 +64,9 @@
     top: -38px;
 }
 
-.mat-mini-fab.mat-button-disabled.mat-button-disabled {
-    background-color: rgba(white, 0.0) !important;
+.top-icon {
+    position: relative;
+    top: -26px;
 }
 
 .volume-icon-dark {
@@ -83,4 +84,9 @@
 
 video:hover {
     opacity: 0.5;
+}
+
+.top-time {
+    position: relative;
+    top: -26px;
 }

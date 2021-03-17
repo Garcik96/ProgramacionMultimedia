@@ -1,0 +1,62 @@
+@import '../../paleta-colores.scss';
+
+::ng-deep .container-fluid {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+::ng-deep .row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.map-open-layers {
+    height: 800px;
+    width: 100%;
+}
+
+canvas {
+    width: 100%;
+}
+
+::ng-deep .ol-attribution.ol-uncollapsible {
+    visibility: hidden;
+}
+
+::ng-deep .ol-control button {
+  color: $light-background;
+  background-color: $light-accent;
+}
+
+::ng-deep .light-select .mat-input-element {
+  color: $light-accent !important;
+}
+
+::ng-deep .dark-select .mat-input-element {
+  color: $dark-accent !important;
+}
+
+::ng-deep .mat-form-field-underline, ::ng-deep .mat-form-field-ripple {
+  background-color: white !important;
+  color: white !important
+}
+
+::ng-deep .mat-form-field-empty.mat-form-field-label {
+    color: white;
+}
+
+.dark-button {
+  background-color: $dark-accent;
+  color: $dark-background;
+  &:focus {
+      outline: 0px;
+  }
+}
+
+.light-button {
+  background-color: $light-accent;
+  color: $light-background;
+  &:focus {
+      outline: 0px;
+  }
+}

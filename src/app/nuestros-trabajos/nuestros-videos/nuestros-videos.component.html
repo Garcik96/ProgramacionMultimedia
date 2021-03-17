@@ -4,10 +4,10 @@
     </div>
 </div>
 <div class="row pt-5" [class.bg-light]="!global.darkMode" [class.bg-dark]="global.darkMode">
-    <div class="col-md-12 col-lg-6 padding-left-80" [class.padding-right-80]="innerWidth < 992">
+    <div class="col-lg-12 col-xl-6 padding-left-80" [class.padding-right-80]="innerWidth < 1200">
         <multimedia-video></multimedia-video>
     </div>
-    <div class="col-md-12 col-lg-6 pb-5 padding-right-80" [class.padding-left-80]="innerWidth < 992">
+    <div class="col-lg-12 col-xl-6 pb-5 padding-right-80" [class.padding-left-80]="innerWidth < 1200">
         <p class="text-justify" [class.text-light]="!global.darkMode" [class.text-dark]="global.darkMode">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus egestas massa nulla, quis tempor elit faucibus eu. Nam sollicitudin 
             massa at diam sollicitudin, in efficitur nunc congue. Sed tincidunt iaculis purus nec gravida. In velit dui, euismod sed venenatis eu, 
@@ -25,11 +25,11 @@
     </div>
 </div>
 <div class="row pt-5" [class.bg-light-accent]="!global.darkMode" [class.bg-dark-accent]="global.darkMode">
-    <div *ngIf="innerWidth < 992" class="col-md-12 col-lg-6 padding-left-80" [class.padding-right-80]="innerWidth < 992">
+    <div *ngIf="innerWidth < 1200" class="col-lg-12 col-xl-6 padding-left-80" [class.padding-right-80]="innerWidth < 1200">
         <multimedia-video></multimedia-video>
     </div>
-    <div class="col-md-12 col-lg-6 pb-5 padding-left-80" [class.padding-right-80]="innerWidth < 992">
-        <p class="text-justify" [class.text-light-accent]="!global.darkMode" [class.text-dark-accent]="global.darkMode">
+    <div class="col-lg-12 col-xl-6 pb-5 padding-left-80" [class.padding-right-80]="innerWidth < 1200">
+        <p class="text-justify" [class.text-light]="!global.darkMode" [class.text-dark]="global.darkMode">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus egestas massa nulla, quis tempor elit faucibus eu. Nam sollicitudin 
             massa at diam sollicitudin, in efficitur nunc congue. Sed tincidunt iaculis purus nec gravida. In velit dui, euismod sed venenatis eu, 
             lacinia ut massa. Aliquam sed velit eu felis tincidunt molestie a sit amet sapien. Ut ac elit consequat, convallis urna sit amet, 
@@ -44,7 +44,7 @@
             Integer rutrum efficitur ante condimentum aliquam. Sed tincidunt purus ac nunc pulvinar pulvinar. Mauris vitae leo ut neque congue mollis.
         </p>
     </div>
-    <div *ngIf="innerWidth > 992" class="col-md-12 col-lg-6 padding-right-80" [class.padding-left-80]="innerWidth < 992">
+    <div *ngIf="innerWidth > 1200" class="col-lg-12 col-xl-6 padding-right-80" [class.padding-left-80]="innerWidth < 1200">
         <multimedia-video></multimedia-video>
     </div>
 </div>
